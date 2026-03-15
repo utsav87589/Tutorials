@@ -2,7 +2,15 @@
 
 {% block content %}
 {% for car in cars %}
-    <h1>{{ car.brand }}</h1>
-    <h2>{{ car.model }} in color {{ car.color }}</h2>
+    <article class="media content-section">
+    <div class="media-body">
+    <div class="article-metadata">
+        <a class="mr-2" href="#">{{ car.brand }}</a>
+        <small class="text-muted">{{ car.model }}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ car.color }}</a></h2>
+    <p class="article-content">{{ car.model }}</p>
+    </div>
+    </article>
 {% endfor %}
 {% endblock %}
