@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit page</title>
+</head>
+<body>
+    <form method="post">
+        <label for="user_name">Enter your name</label>
+        <input type="text" id = "user_name" name = "username">
+        <button type="submit">Submit</button>
+    </form>
+
+    {%  if name %}
+    <h2>Hello, {{ name }}</h2>
+    {% endif %}
+
+    {% if error %}
+    <h2>Sorry! {{ error }}</h2>
+    {% endif %}
+
+</body>
+</html>
